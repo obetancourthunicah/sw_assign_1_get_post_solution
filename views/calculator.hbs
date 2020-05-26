@@ -1,0 +1,21 @@
+<form action="/calculator" method="post">
+  <label for="fltNum1">Operando 1</label>
+  <input type="number" name="fltNum1" placeholder="Número 1" id="fltNum1" value="{{fltNum1}}"/>
+  <br/>
+  <label for="fltNum2">Operando 2</label>
+  <input type="number" name="fltNum2" placeholder="Número 2" id="fltNum2" value="{{fltNum2}}" />
+  <br/>
+  <label for="cmbOperacion">Operación</label>
+  <select name="cmbOperacion" id="cmbOperacion">
+    <option value="add" {{adds}}>Sumar</option>
+    <option value="sub" {{subs}}>Restar</option>
+    <option value="mlt" {{mlts}}>Multiplicar</option>
+    <option value="div" {{divs}}>Dividir</option>
+  </select>
+  <br/>
+  <button type="submit" name="btnProcesar">Procesar</button>
+</form>
+
+<section>
+  {{strResultado}}
+</section>
